@@ -1,0 +1,139 @@
+/* style.css */
+
+header {
+ font-family: Futura, Trebuchet MS;
+ font-weight: bold condensed;
+ color: #AC2B37; 
+ font-size: 25px;
+ padding: 15px;
+}
+
+body {
+  font-family: 'Comic Sans MS', 'Chewy', cursive;
+  font-weight: bold;
+  color: #FF0000;
+  font-size: 16px;
+  padding: 10px;
+}
+
+h1 {
+  font-family: 'Impact', 'Fredoka One', cursive;
+  font-weight: bold condensed;
+  color: #FF5733; 
+  font-size: 30px;
+  padding: 20px;
+}
+
+#content {
+    padding:3px;
+}
+
+#WPI{
+    /*center the image*/
+    display: block; 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main_nav ul { padding: 0; margin: 0; }
+
+#main_nav li  {
+  list-style-type: none; /* remove bullet points */ 
+}
+
+#main_nav li a {
+   display: block;
+   text-decoration: none; /* remove underline */
+   border-radius: 10px;  /* rounded corners */
+   margin: 6px;
+   padding: 9px;
+   color: #222;
+   font-weight: bold;
+
+   /* nice gradient shade on the buttons */
+   background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+
+   border: 1px solid #666; /* dark outline */
+}
+
+nav li:active {
+  background-color: #ccc;
+  background-image: none;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2);
+}
+
+/* Style for the <footer> element */
+footer {
+  font-family: 'Comic Sans MS', 'Chewy', cursive;
+  font-weight: bold;
+  color: #FF5733;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+/* Style for the <video> tag */
+video {
+  /* Add your style definitions here */
+  border: 1px solid #999;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+
+  /* Transitions applied to the video element */
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+/* Style for the <audio> tag */
+audio {
+  /* Add your style definitions for audio if needed */
+}
+
+button.back {
+/*These lines override the previous styling of buttons*/
+-webkit-border-image: url("greyButton.png") 0 14 0 14 stretch;
+width:60px;
+height: 30px;
+ 
+/*These lines position the back button inside the header*/
+position:absolute;
+left:16px;
+top:8px;
+}
+
+header.secondary {
+    padding-left: 75px;
+}
+
+/* Center the button and add styling */
+button {
+    /* Center the button */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Set top and bottom margins */
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /* Add an image to your button */
+    -webkit-border-image: url("orangeButton.png") 14 14 14 14 stretch;
+    background-size: cover;
+
+    /* Set width and height for the button */
+    width: 200px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+}
+In this code snippet, I've added the specified styles to center the button, set top and bottom margins, added an image to the button using -webkit-border-image, and set the width and height for the button. Adjust the values as needed for your design. Make sure to replace "orangeButton.png" with the actual path to your button image.
+
+
+
+
+

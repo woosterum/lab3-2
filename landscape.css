@@ -1,0 +1,80 @@
+/* landscape.css */
+
+header {
+ font-family: Futura, Trebuchet MS;
+ font-weight: bold condensed;
+ color: #AC2B37; 
+ font-size: 25px;
+ padding: 15px;
+ background-color: #EFEFEF; /* Change background color */
+}
+
+body {
+  font-family: 'Comic Sans MS', 'Chewy', cursive;
+  font-weight: bold;
+  color: #00FF00; /* Change text color */
+  font-size: 16px;
+  padding: 10px;
+}
+
+h1 {
+  font-family: 'Impact', 'Fredoka One', cursive;
+  font-weight: bold condensed;
+  color: #FF5733; 
+  font-size: 30px;
+  padding: 20px;
+}
+
+#content {
+    padding: 3px;
+}
+
+#WPI {
+    /* Center the image */
+    display: block; 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+  font-family: 'Comic Sans MS', 'Chewy', cursive;
+  font-weight: bold;
+  color: #FF5733;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+/* Updated styles for the navigation menu */
+#main_nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 10px;
+	font-weight: bold;
+}
+ 
+#main_nav ul li {
+	background-color: #fff;
+	border: 1px solid #999;
+	color: #222;
+	display: block;
+	margin-bottom: -1px;
+	padding: 12px 10px;
+}
+
+#main_nav ul li a {
+	text-decoration: none;
+}
+
+/* Add traditional rounded corners to the navigation menu */
+#main_nav li:first-child {
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+ 
+#main_nav li:last-child {
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}

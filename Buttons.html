@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Reserve your Bike - BIKE WPI </title>
+
+    <!-- Link to style.css for all orientations -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+
+<body onload="initBody()">
+    <!-- Consistent header style with index.html -->
+    <header class="secondary">Reserve your bike</header>
+
+    <!-- Back button linking to index.html -->
+    <button class="back" onclick="location.href='index.html';">Back</button>
+
+    <div id="buttons">
+        <button id="alertButton" onclick="showWelcomeAlert()">Alert</button>
+        <button id="promptButton" onclick="promptButtonClicked()">Prompt</button>
+        <button id="confirmationButton" onclick="confirmButtonClicked()">Confirm</button>
+        <!-- Adding onclick event to changeButton -->
+        <button id="changeButton" onclick="changeButtonClicked()">Change bike</button>
+    </div>
+
+    <div id="content">
+        <img id="bikeImg" src="">
+        <p id="choicelist">
+            <ul id="orderedBike"> </ul>
+        </p>
+    </div>
+
+    <!-- JavaScript function to show welcome alert -->
+    <script>
+        function showWelcomeAlert() {
+            alert('Welcome!');
+        }
+
+        // JavaScript function for promptButtonClicked
+        function promptButtonClicked() {
+            var destination = prompt("Where would you like to ride");
+
+            if (destination !== "") {
+                var p = document.getElementById("choicelist");
+                p.innerHTML = "Here is a summary of your choices";
+
+                var li = document.createElement("li");
+                li.innerHTML = destination;
+
+                var ul = document.getElementById("orderedBike");
+                ul.appendChild(li);
+            }
+        }
+
+        // JavaScript function for confirmButtonClicked
+        function confirmButtonClicked() {
+            var bool = confirm("Are you sure?");
+
+            if (bool == true) {
+                // Retrieve the <img> object from the DOM and set its src attribute
+                var img = document.getElementById("bikeImg");
+                img.src = "bike1.jpg";
+
+                // Create a new <p> element and set its content
+                var p = document.createElement("p");
+                p.innerHTML = "You are bike ready!";
+
+                // Retrieve an element from the DOM. We then add our new element as a child to this element.
+                var contentDiv = document.getElementById("content");
+                contentDiv.appendChild(p);
+
+                // Make the Change bike button visible
+                document.getElementById("changeButton").style.visibility = "visible";
+            }
+        }
+
+        // JavaScript function for initBody
+        function initBody() {
+            // Retrieve the changeButton element from the DOM and hide it
+            document.getElementById("changeButton").style.visibility = "hidden";
+        }
+
+        // Global array variable for bike images
+        var bikeArr = new Array("Bike.jpg", "bike1.jpg", "Bike2.jpg", "Bike3.jpg", "Bike4.jpg");
+
+        // JavaScript function for changeButtonClicked
+        function changeButtonClicked() {
+            // Calculate a random integer number within the range of bikeArr indices
+            var randomIndex = Math.floor(Math.random() * bikeArr.length);
+
+            // Retrieve the <img> object from the DOM and set its src attribute to the randomly selected image
+            var img = document.getElementById("bikeImg");
+            img.src = bikeArr[randomIndex];
+        }
+    </script>
+</body>
+
+</html>
